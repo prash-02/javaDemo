@@ -1,6 +1,6 @@
 class pw
 {
-	m1 {
+	pub	m1 {
 	    	///code
 	   }
 }
