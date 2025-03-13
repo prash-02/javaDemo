@@ -1,6 +1,37 @@
-class pw
-{
-	m1 {
-	    	///code
-	   }
+package Inheritance;
+class AeroPlane1{
+    public void TakeOff(){
+        System.out.println("AeroPlane TakeOff");
+    }
+    public void Fly(){
+        System.out.println("AeroPlane Fly");
+    }
+}
+class cargoPlane1 extends AeroPlane1{
+    public void TakeOff(){
+        System.out.println("CargoPlane requires Longer runWay to takeoff");
+    }
+    public void Fly(){
+        System.out.println("cargoPlane Flys at lower height");
+    }
+}
+
+class PassengerPlane1 extends AeroPlane1{
+    public void TakeOff(){
+        System.out.println("Passenger Plane Can TakeOff at shoter runWay As compare to cargoPlane");
+    }
+    public void Fly(){
+        System.out.println("Passenger Plane Flys at Higher height");
+    }
+}
+
+public class AeroPlane {
+    public static void main(String[] args) {
+        cargoPlane1 cp = new cargoPlane1();
+        cp.TakeOff();
+        cp.Fly();
+        PassengerPlane1 pp= new PassengerPlane1();
+        pp.TakeOff();
+        pp.Fly();
+    }
 }
