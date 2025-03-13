@@ -1,6 +1,38 @@
-class pw
-{
-	pub	m1 {
-	    	///code
-	   }
+import java.util.Scanner;
+
+class farmer {
+int pa;
+float td;
+static float ri;
+float si;
+static{
+    ri=8.5f;  // har ek object me same use ho raha hai. Means Memory ek hi bar allocate hogi
+}
+void input(){
+    Scanner scan = new Scanner(System.in);
+    System.out.println("Please Enter the required amount");
+    pa=scan.nextInt();
+    System.out.println("Please Enter time duration");
+    td=scan.nextFloat();
+}
+void compute(){
+    si=(pa*ri*td)/100f;
+}
+void disp(){
+    System.out.println("SI is :"+si);
+}
+
+}
+public class farmerProject {
+    public static void main(String[] args) {
+        farmer f1 = new farmer();
+        f1.input();
+        f1.compute();
+        f1.disp();
+        farmer f2 = new farmer();
+        f2.input();
+        f2.compute();
+        f2.disp();
+
+    }
 }
